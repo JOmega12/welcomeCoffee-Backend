@@ -6,7 +6,6 @@
   "scripts": {
     "test": "npx ts-node encryption-playground.ts",
     "start": "node ./build/src/server.js",
-    "start-tsc": "npx tsc",
     "dev": "nodemon server.ts",
     "seed": "ts-node prisma/seed.ts",
     "postinstall": "prisma generate"

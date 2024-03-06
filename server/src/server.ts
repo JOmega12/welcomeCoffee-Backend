@@ -1,11 +1,9 @@
-import express from 'express';
+import express = require('express');
 import { coffeeRouter } from '../router/coffeeRouter.router.';
 import { userRouter } from '../router/userRouter.router';
 import { authController } from '../router/authRouter.router';
 import { User } from '@prisma/client';
-// import { PrismaClient } from "@prisma/client";
-// import { createProxyMiddleware } from "http-proxy-middleware";
-import cors from 'cors'
+import cors = require('cors');
 import { favoriteRouter } from '../router/favRouter.router';
 
 const app = express();
@@ -38,3 +36,7 @@ app.use("/favorites", favoriteRouter);
 
 // this launches the port 4000
 app.listen(4000);
+
+
+// there is an import bcrypt problem with no defauly export whenever i run npx tsc ./src/server.ts
+// for typescript node

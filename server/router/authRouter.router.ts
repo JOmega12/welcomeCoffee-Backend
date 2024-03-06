@@ -2,7 +2,7 @@ import { Router } from "express";
 import { z } from "zod";
 import { validateRequest } from "zod-express-middleware";
 import { prisma } from "../prisma/db.setup";
-import bcrypt from "bcrypt";
+import * as bcrypt from "bcrypt";
 import {
   createTokenForUser,
   createUnsecuredUserInformation,
