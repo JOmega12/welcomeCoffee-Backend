@@ -7,7 +7,9 @@ import cors = require('cors');
 import { favoriteRouter } from '../router/favRouter.router';
 
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin: ["https://welcomecoffee-frontend.onrender.com/"]
+}));
 // uses the type system for authMid
 declare global {
     namespace Express {
